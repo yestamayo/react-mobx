@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
-import DevTools from 'mobx-react-devtools';
+//import DevTools from 'mobx-react-devtools';
+import TodoList from './TodoList';
+import store from './TodoStore';
 
-@observer
 class App extends Component {
   render() {
     return (
       <div>
         <button onClick={this.onReset}>
-          Seconds passed: {this.props.appState.timer}
+          Seconds passed: {/*this.props.appState.timer*/}
         </button>
-        <DevTools />
+        {/*<DevTools />*/}
+        <TodoList store={store} />
       </div>
     );
   }
 
-  onReset = () => {
-    this.props.appState.resetTimer();
-  }
+
+  //onReset = () => {
+    //this.props.appState.resetTimer();
+  //}
 };
 
 export default App;

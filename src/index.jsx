@@ -13,7 +13,7 @@ render(
   document.getElementById('root')
 );
 
-if (module.hot) {
+/*if (module.hot) {
   module.hot.accept('./App', () => {
     const NextApp = require('./App').default;
 
@@ -24,4 +24,4 @@ if (module.hot) {
       document.getElementById('root')
     );
   });
-}
+}*/
